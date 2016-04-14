@@ -31,7 +31,7 @@ class UdaciList
   def all
 		rows = []
     @items.each_with_index do |item, position|
-      rows << [position + 1, item.details]
+			rows << [position + 1, item.class.name, item.details]
     end
 		table = Terminal::Table.new title: @title, rows: rows
 		puts table
