@@ -1,13 +1,18 @@
 # What you added to Udacitask 2.0
 # -------------------------------------------------------
 1. What is the gem of your choice and how did you use it?
+Terminal-Table to generate pretty lists
 2. Describe the 2 features you added to the project.
-  a) Feature 1...
-  b) Feature 2...
+  a) The export method to csv
+  b) the "higher_priority" and "lower_priority" methods give the ability to change effectively priorities
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
+I honestly don't know but I must say that I take my time
 2. What was the most rewarding challenge you conquered?
+I'm already a rails developer, I'm just making sure I know all the basics in ruby
 3. What two additional features did you build? Why?
+Anyone should be able to send a todolist or keep it somewhere else so I added the export method to the udacilist class. And changing priorities is easier now with the "higher_priority" and "lower_priority" methods.
 4. Where do you still have room to grow?
+I'd love to make complex gems
