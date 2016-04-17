@@ -28,14 +28,22 @@ class UdaciList
 		end
 	end
 
-  def all
+	def print_in_table(list)
 		rows = []
-    @items.each_with_index do |item, position|
-			rows << [position + 1, item.class.name, item.details]
-    end
+		list.each_with_index do |item, position|
+			rows << [position + 1, formatted_item_type(item), item.details]
+		end
 		table = Terminal::Table.new title: @title, rows: rows
 		puts table
+	end
+
+  def all
+		print_in_table(@items)
   end
+
+	def formatted_item_type(item)
+		item.class.name.gsub("Item", "").downcase
+	end
 
 	def export
 		path = "data/#{self.title}.csv"
@@ -49,6 +57,7 @@ class UdaciList
 	end
 
 	def filter(item_type)
-		@items.select {|item| item.class.name == item_type}
+		@filtered_items = @items.select {|item| formatted_item_type(item) == item_type}
+		print_in_table @filtered_items
 	end
 end
