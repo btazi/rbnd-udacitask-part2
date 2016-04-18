@@ -45,6 +45,10 @@ class UdaciList
 		item.class.name.gsub("Item", "").downcase
 	end
 
+	def find_item(index)
+		@items[index-1]
+	end
+
 	def export
 		path = "data/#{self.title}.csv"
 		FileUtils.rm path if File.file?(path)

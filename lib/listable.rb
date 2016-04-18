@@ -19,12 +19,12 @@ module Listable
     return value
   end
 
-	def lower_priority
+	def higher_priority
 		self.priority = "medium" if self.priority == "low"
 		self.priority = "high" if self.priority == "medium"
 	end
 
-	def higher_priority
+	def lower_priority
 		self.priority = "low" if self.priority == "medium"
 		self.priority = "medium" if self.priority == "high"
 	end
